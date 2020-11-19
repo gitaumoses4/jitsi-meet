@@ -29,7 +29,7 @@ export function fetchCustomBrandingData() {
         if (!customizationReady) {
             const fqn = extractFqnFromPath(state['features/base/connection'].locationURL.pathname);
 
-            if (baseUrl && fqn) {
+            if (baseUrl) {
                 try {
                     const res = await doGetJSON(`${baseUrl}?conferenceFqn=${encodeURIComponent(fqn)}`);
 
